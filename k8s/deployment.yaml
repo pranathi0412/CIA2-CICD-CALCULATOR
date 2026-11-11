@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calculator-app
+  template:
+    metadata:
+      labels:
+        app: calculator-app
+    spec:
+      containers:
+        - name: calculator-app
+          image: cia2registry2026.azurecr.io/calculator-app:4
+          ports:
+            - containerPort: 8082
+          imagePullPolicy: Always
