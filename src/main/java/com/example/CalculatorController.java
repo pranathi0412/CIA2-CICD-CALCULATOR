@@ -38,6 +38,6 @@ public class CalculatorController {
                 return "Invalid operation";
         }
 
-        return "Result: " + result;
+        return "Result: " + result + "!";
     }
 }
