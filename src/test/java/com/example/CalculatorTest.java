@@ -1,4 +1,3 @@
-
 package com.example;
 
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ public class CalculatorTest {
                 .param("b", "20")
                 .param("operation", "add"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Result: 30.0"));
+                .andExpect(content().string("Result: 30.0!"));
     }
 
     @Test
@@ -35,7 +34,7 @@ public class CalculatorTest {
                 .param("b", "10")
                 .param("operation", "subtract"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Result: 20.0"));
+                .andExpect(content().string("Result: 20.0!"));
     }
 
     @Test
@@ -45,7 +44,7 @@ public class CalculatorTest {
                 .param("b", "5")
                 .param("operation", "multiply"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Result: 50.0"));
+                .andExpect(content().string("Result: 50.0!"));
     }
 
     @Test
@@ -55,7 +54,6 @@ public class CalculatorTest {
                 .param("b", "4")
                 .param("operation", "divide"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Result: 5.0"));
+                .andExpect(content().string("Result: 5.0!"));
     }
 }
-
